@@ -41,6 +41,8 @@ fi
 
 echo invoking pandoc...
 
+# This is generic, but I might as well credit who I copied the base skeleton from.
+# https://learnbyexample.github.io/customizing-pandoc/#changing-settings-via-v-option
 pandoc "$1" \
     --standalone \
     ${template} \
