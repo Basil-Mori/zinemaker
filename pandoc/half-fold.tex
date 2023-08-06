@@ -1,0 +1,10 @@
+\documentclass[letterpaper]{article}
+\usepackage[final]{pdfpages}
+\begin{document}
+\includepdf[pages={-,{}},landscape=true,booklet=true,frame=false,scale=1.0,delta=0 -0.25in]{fold_input.pdf}
+\end{document}
+
+% 35 is interesting
+% - 20
+%final - 1.1, -0.5in
+% second final: produces better standalone margins - scale 1.0, delta 0, -0.5in
