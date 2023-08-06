@@ -11,9 +11,9 @@ subject: Zines
 \
 \
 ![cover](cover.png)
-\thispagestyle{empty} \clearpage
+\thispagestyle{empty}\clearpage
 
-\begingroup \smallfont
+\begingroup \smallfont \setcounter{page}{1}
 
 **About ^Z**
 
