@@ -1,11 +1,9 @@
 ---
-title-meta: 'A Cool Zine'
-author-meta: 'Me :D'
+title: 'Ctrl-Zine - Issue 6'
+author-meta: 'Various Authors'
 keywords:
-- 'keyword1'
-- 'keyword2'
-- 'keyword3'
-subject: Zines
+- 'zine'
+subject: ''
 ---
 
 \
