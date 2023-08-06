@@ -479,49 +479,21 @@ $endif$
 % --------------
 % all my custom
 
-%\usepackage{enotez}
-\usepackage{anyfontsize}
 \usepackage{setspace}
 \usepackage{letltxmacro}
 \usepackage{graphicx}
 
-% Making all footnotes turn to end notes...
-%\let\footnote=\endnote
-
+% give footnotes more breathing room
 \addtolength{\skip\footins}{5mm}    % vertical space between rule and main text
 \addtolength{\footnotesep}{5mm}
-%
-%\setenotez{
-%    list-name = {Links},
-%    list-heading = {\section{#1}},
-%    reset = true,
-%}
-
-%\AtEveryEndnotesList{
-%    \singlespace \setlength{\parskip}{10pt}    
-%}
-%
-%\AfterEveryEndnotesList{
-%    \onehalfspacing
-%    \setlength{\parskip}{18pt}
-%}
-
-%\renewcommand{\footnotesize}{\fontsize{12pt}{14pt}\selectfont}
-
-% \AtEveryEndnotesList{\fontsize{13}{18}\selectfont}
-% \AfterEveryEndnotesList{\clearpage}
-
-% Alias href to originalHref to avoid an infinite loop
-% \LetLtxMacro{\originalHref}{\href}
-% Make links footnotes in addition to hotlinks:
-% \renewcommand{\href}[2]{\originalHref{#1}{#2}\footnote{\url{#1}}}
-
 
 % making sections always start on a new page
+% https://learnbyexample.github.io/customizing-pandoc/#chapter-breaks
 \usepackage{sectsty}
 \sectionfont{\clearpage}
 
 % title font customization
+% From somewhere on stackoverflow, I think.
 \usepackage{titlesec}
 \titleformat{\section}
   {\normalfont\normalsize\bfseries\clearpage}{\thesection.}{1em}{}
@@ -531,6 +503,8 @@ $endif$
   {\normalfont\normalsize\itshape}{\thesubsubsection.}{1em}{}
 
 % code blocks background color
+% https://learnbyexample.github.io/customizing-pandoc/#syntax-highlighting
+% see also /pygments.theme
 \usepackage{fancyvrb,newverbs,xcolor}
 
 \definecolor{Light}{HTML}{F4F4F4}
@@ -550,8 +524,8 @@ $endif$
 \newcommand{\bcenter}{\begin{center}}
 \newcommand{\ecenter}{\end{center}}
 
-%\renewcommand*{\thepage}{\hfill--~\roman{page}~--}
 
+% fancy header and cool page numbers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead[L,C]{}
@@ -565,12 +539,7 @@ $endif$
 %\interlinepenalty 10000
 \onehalfspacing
 \setlength{\parskip}{18pt}
-\raggedbottom
-%\pagestyle{empty}
-
-% \includegraphics{cover.png}
-% \thispagestyle{empty}
-
+%\raggedbottom
 
 $if(has-frontmatter)$
 \frontmatter
@@ -665,5 +634,4 @@ $for(include-after)$
 $include-after$
 
 $endfor$
-%\printendnotes
 \end{document}
