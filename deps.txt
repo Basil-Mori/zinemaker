@@ -19,6 +19,8 @@ If you want a line in the middle of the page, put a frame on the second step. Bu
 
     Update: No more endnotes, they're not worth it. Direct users to use footnotes like so:
         `This is a link stuck somewhere in the text.^[<https://google.com>]`
+        or:
+        `[This is a link stuck somewhere in the text.](https://google.com)^[https://google.com]`
 
 I had to zoom/adjust to get a good quarter-fold. A4 is much better.
 
