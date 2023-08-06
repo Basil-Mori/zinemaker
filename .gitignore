@@ -1,4 +1,5 @@
 scratch_files/
 ctrl-zine_issue6-test/*.pdf
+ctrl-zine_issue6-test/*.html
 pandoc/*.aux
 pandoc/*.log
