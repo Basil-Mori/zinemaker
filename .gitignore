@@ -1,0 +1,4 @@
+scratch_files/
+ctrl-zine_issue6-test/*.pdf
+pandoc/*.aux
+pandoc/*.log

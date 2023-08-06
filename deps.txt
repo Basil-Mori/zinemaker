@@ -1,0 +1,45 @@
+texlive-latex
+texlive-latexrecommended
+texlive-latexextra // for lmodern.sty and sectsty?
+pandoc
+
+
+font: ibm plex mono
+
+---
+notes
+---
+
+If you want a line in the middle of the page, put a frame on the second step. But it'll create a box.
+^Zine is letter-size. It won't print quite right on letter paper otherwise. 
+
+~~Consider removing \printendnotes from the template and instructing the user to sprinkle it throughout as they please?~~
+
+~~Use \originalHref to insert links without endnotes.~~
+
+    Update: No more endnotes, they're not worth it. Direct users to use footnotes like so:
+        `This is a link stuck somewhere in the text.^[<https://google.com>]`
+
+I had to zoom/adjust to get a good quarter-fold. A4 is much better.
+
+The hardest thing to set into the document was easily 'W3bK3rN3l radio outpost' due to the difficulty of escaping lots of characters
+
+Mention a couple optional things, like a lack of page numbers. You can just turn them back on.
+Also mention formatting you get for free, like code boxes having syntax highlighting.
+
+---
+docs
+---
+
+https://pandoc.org/MANUAL.html // Always read the dovs.
+http://tug.ctan.org/macros/latex/contrib/booklet/booklet.pdf // documentation for making booklets
+https://ctan.math.illinois.edu/macros/latex/contrib/sectsty/sectsty.pdf
+https://mirror.las.iastate.edu/tex-archive/macros/latex/contrib/enotez/enotez_en.pdf
+
+
+---
+https://learnbyexample.github.io/customizing-pandoc/  // my main resource
+~~https://tex.stackexchange.com/questions/56145/is-there-a-way-to-move-all-footnotes-to-the-end-of-the-document/470558#470558  // how I learned about enotez~~
+~~https://stackoverflow.com/questions/33900067/pandoc-filter-to-add-footnotes-to-links#42474192 // my resource for creating link footnotes automatically~~
+https://mostlymaths.net/2010/11/creating-a6-booklets-in-7-easy-steps.html/  // the main place I learned how to use 2up
+
