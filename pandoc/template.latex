@@ -550,6 +550,14 @@ $endif$
 \newcommand{\bcenter}{\begin{center}}
 \newcommand{\ecenter}{\end{center}}
 
+%\renewcommand*{\thepage}{\hfill--~\roman{page}~--}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L,C]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{\^{}Z \thepage}
+
 % --------------
 \begin{document}
 
@@ -558,7 +566,7 @@ $endif$
 \onehalfspacing
 \setlength{\parskip}{18pt}
 \raggedbottom
-\pagestyle{empty}
+%\pagestyle{empty}
 
 % \includegraphics{cover.png}
 % \thispagestyle{empty}
