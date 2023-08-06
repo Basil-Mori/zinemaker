@@ -71,10 +71,12 @@
 - Encourage anyone making their own zine to customize some things to make it more unique.
 - Encourage people submitting content for a zine made using this tool to format their entries in pandoc markdown ahead of time, and use the tool itself to test them, and encourage zine creators who customize the template to share that template for others to reference.
 
+
+- by default it uses a template that's a bit more generic. the ^Z test includes a template for ^Z's distinctive look.
 # how to customize
 - go to makezine.sh and change the fonts, font size, margins, etc
-- go to template.latex and change:
+- copy template.latex and change:
     - what section fonts look like
-    - the page numbers having "^Z" in front of them
+    - the page numbers
     - line spacing and parskip
 - add any level of custom html/css
