@@ -13,7 +13,7 @@ case $pagetype in
        ;;
     html)
        echo making html page...
-       echo "(this won't work as well)"
+       echo "(this is only slightly supported)"
        ;;
     *)
        echo "usage: (a4|letter|html) input.md"
@@ -30,13 +30,18 @@ then
    template=""
    outputfile=$outprefix.html
 else
-   template="--template=${direc}/template.latex"
+   template="--template=${direc}/template.tex"
    outputfile=$outprefix.pdf
 fi
 
 if [[ -f $outputfile ]]; then
     echo "Overwriting file $(basename $1 .md).$([[ $pagetype = html ]] && echo "html" || echo "pdf" )"
     read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+fi
+
+if [[ -f $(pwd)/template.tex ]]; then
+    echo using template from current directory
+    template="--template=$(pwd)/template.tex"
 fi
 
 echo invoking pandoc...
@@ -51,8 +56,8 @@ pandoc "$1" \
     -V linkcolor:blue \
     -V papersize=$pagetype \
     -V geometry:margin=1in \
-    -V mainfont="IBM Plex Mono" \
-    -V monofont="IBM Plex Mono Light" \
+    -V mainfont="DejaVu Sans" \
+    -V monofont="DejaVu Sans Mono" \
     -V fontsize=12pt \
     \
     -o "$outputfile" && (

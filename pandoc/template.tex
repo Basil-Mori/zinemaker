@@ -479,6 +479,12 @@ $endif$
 % --------------
 % all my custom
 
+% You can change fonts regardless of the .sh settings here.
+%\setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{IBM Plex Mono}
+%\setmonofont[$for(monofontoptions)$$monofontoptions$$sep$,$endfor$]{IBM Plex Mono Light}
+
+
+
 \usepackage{setspace}
 \usepackage{letltxmacro}
 \usepackage{graphicx}
@@ -494,13 +500,13 @@ $endif$
 
 % title font customization
 % From somewhere on stackoverflow, I think.
-\usepackage{titlesec}
-\titleformat{\section}
-  {\normalfont\normalsize\bfseries\clearpage}{\thesection.}{1em}{}
-\titleformat{\subsection}
-  {\normalfont\normalsize\itshape}{\thesubsection.}{1em}{}
-\titleformat{\subsubsection}
-  {\normalfont\normalsize\itshape}{\thesubsubsection.}{1em}{}
+%\usepackage{titlesec}
+%\titleformat{\section}
+%  {\normalfont\normalsize\bfseries\clearpage}{\thesection.}{1em}{}
+%\titleformat{\subsection}
+%  {\normalfont\normalsize\itshape}{\thesubsection.}{1em}{}
+%\titleformat{\subsubsection}
+%  {\normalfont\normalsize\itshape}{\thesubsubsection.}{1em}{}
 
 % code blocks background color
 % https://learnbyexample.github.io/customizing-pandoc/#syntax-highlighting
@@ -519,8 +525,6 @@ $endif$
 
 \newcommand{\smallfont}{\fontsize{10}{12}\selectfont}
 
-\newcommand{\clibyte}[1]{\vfill\makebox[\textwidth]{\texttt{#1}}}
-
 \newcommand{\bcenter}{\begin{center}}
 \newcommand{\ecenter}{\end{center}}
 
@@ -530,15 +534,13 @@ $endif$
 \pagestyle{fancy}
 \fancyhead[L,C]{}
 \fancyfoot[C]{}
-\fancyfoot[R]{\^{}Z \thepage}
+\fancyfoot[R]{\thepage}
 
 % --------------
 \begin{document}
 
 % custom font stuff...
 %\interlinepenalty 10000
-\onehalfspacing
-\setlength{\parskip}{18pt}
 %\raggedbottom
 
 $if(has-frontmatter)$
