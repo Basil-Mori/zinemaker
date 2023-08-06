@@ -34,6 +34,11 @@ else
    outputfile=$outprefix.pdf
 fi
 
+if [[ -f $outputfile ]]; then
+    echo "Overwriting file $(basename $1 .md).$([[ $pagetype = html ]] && echo "html" || echo "pdf" )"
+    read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
+fi
+
 echo invoking pandoc...
 
 pandoc "$1" \
