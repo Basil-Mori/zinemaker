@@ -42,4 +42,5 @@ https://learnbyexample.github.io/customizing-pandoc/  // my main resource
 ~~https://tex.stackexchange.com/questions/56145/is-there-a-way-to-move-all-footnotes-to-the-end-of-the-document/470558#470558  // how I learned about enotez~~
 ~~https://stackoverflow.com/questions/33900067/pandoc-filter-to-add-footnotes-to-links#42474192 // my resource for creating link footnotes automatically~~
 https://mostlymaths.net/2010/11/creating-a6-booklets-in-7-easy-steps.html/  // the main place I learned how to use 2up
+https://tex.stackexchange.com/questions/66562/how-to-set-page-counter-by-skipping-first-page // skip pages
 
