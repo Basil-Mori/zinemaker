@@ -49,7 +49,8 @@ forever!
 |
 | ~singletona82
 
-**Re-Compiled by ~basilmori as a proof of concept.**
+| **Originally put together by ~loghead**
+| **Re-Compiled by ~basilmori as a proof of concept**
 
 \clibyte{CLI BYTE: “Whois” - client for the whois directory service}
 
