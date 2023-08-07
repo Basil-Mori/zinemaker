@@ -109,11 +109,11 @@ Live long, the Smol Web!
 # W3bK3rN3l radio outpost
 
 | wbknl-000001
-| \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
-| KG-84 encrypted MIL-STD 188-110B
+| \-----------------------
+| KG-84 encrypted MIL-STD 188-110B 
 | Message made on an ISB circuit
-| \--> Croughton (AJE)
-| \--> Sigonella (NSY)
+| --> Croughton (AJE)
+| --> Sigonella (NSY)
 
 {\
 Several theorists suggest that this is a secret communication
@@ -123,11 +123,11 @@ events and military exercises that have taken place during
 intercepts of w3bk3rn3l's radio transmissions back the theory\
 }
 
-1\.\.\.\.<|.|>\.\.\.\.\.\.\.19\.\.\.\.\.\.\.\.\.\.\.\.\.\.35\.\.\.\.\.\.\.\.|\*\.\.\.\$\!\.\.\.\.\.\.\.\.\%\"\.\.\:wq
+1....<|.|>.......19..............35........|*...$!........%"..:wq
 
 ==> BEGIN ENCRYPTION
 
-\ > BOT
+\> BOT
 
 I've been isolated in this communications outpost. I no longer
 remember when I left Earth, heading to the SOL system and to my
@@ -147,7 +147,7 @@ I send this first message in the hope that it will be read by my
 comrades, so that we can communicate in this SOL system, so far
 away and so desolate.
 
-\[\#\$\%\&\"\/\&\&\"\%\!\$\$ \--> noise]
+[\#\$\%\&\"\/\&\&\"\%\!\$\$ --> noise]
 
 \> EOT
 

@@ -17,6 +17,7 @@ case $pagetype in
        ;;
     *)
        echo "usage: (a4|letter|html) input.md"
+       exit 1
        ;;
 esac
 
@@ -32,16 +33,15 @@ then
 else
    template="--template=${direc}/template.tex"
    outputfile=$outprefix.pdf
+   if [[ -f $(pwd)/template.tex ]]; then
+        echo using template from current directory
+        template="--template=$(pwd)/template.tex"
+    fi
 fi
 
 if [[ -f $outputfile ]]; then
     echo "Overwriting file $(basename $1 .md).$([[ $pagetype = html ]] && echo "html" || echo "pdf" )"
     read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
-fi
-
-if [[ -f $(pwd)/template.tex ]]; then
-    echo using template from current directory
-    template="--template=$(pwd)/template.tex"
 fi
 
 echo invoking pandoc...
@@ -51,6 +51,7 @@ echo invoking pandoc...
 pandoc "$1" \
     --standalone \
     ${template} \
+    --embed-resources \
     --highlight-style ${direc}/pygments.theme \
     --pdf-engine=xelatex \
     -V linkcolor:blue \
@@ -59,6 +60,7 @@ pandoc "$1" \
     -V mainfont="DejaVu Sans" \
     -V monofont="DejaVu Sans Mono" \
     -V fontsize=12pt \
+    -f markdown-smart \
     \
     -o "$outputfile" && (
 
