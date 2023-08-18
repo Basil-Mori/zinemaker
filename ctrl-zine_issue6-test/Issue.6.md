@@ -1,17 +1,11 @@
 ---
 title: 'Ctrl-Zine - Issue 6'
 author-meta: 'Various Authors'
+cover-image: 'cover.png'
 keywords:
 - 'zine'
 subject: ''
 ---
-
-\
-\
-![cover](cover.png)
-\thispagestyle{empty}\clearpage
-
-\begingroup \smallfont \setcounter{page}{1}
 
 **About ^Z**
 
@@ -108,12 +102,12 @@ Live long, the Smol Web!
 
 # W3bK3rN3l radio outpost
 
-| wbknl-000001
-| \-----------------------
-| KG-84 encrypted MIL-STD 188-110B 
-| Message made on an ISB circuit
-| --> Croughton (AJE)
-| --> Sigonella (NSY)
+wbknl-000001 \
+\----------------------- \
+KG-84 encrypted MIL-STD 188-110B \
+Message made on an ISB circuit \
+--> Croughton (AJE) \
+--> Sigonella (NSY) \
 
 {\
 Several theorists suggest that this is a secret communication

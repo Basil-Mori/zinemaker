@@ -6,17 +6,21 @@ pagetype=$1
 
 case $pagetype in
     a4)
-       echo making a4 page...
+       echo making a4 pdf...
        ;;
     letter)
-       echo making us letter page...
+       echo making us letter pdf...
        ;;
     html)
        echo making html page...
        echo "(this is only slightly supported)"
        ;;
+    epub)
+       echo making epub document...
+       echo "(this is only slightly supported)"
+       ;;
     *)
-       echo "usage: (a4|letter|html) input.md"
+       echo "usage: (a4|letter|html|epub) input.md"
        exit 1
        ;;
 esac
@@ -28,10 +32,28 @@ outprefix=$(pwd)/$(basename $1 .md)
 if [[ $pagetype == html ]]
 then
    #echo using HTML template...
-   template=""
-   outputfile=$outprefix.html
+    template=""
+    css=""
+    outputfile=$outprefix.html
+    if [[ -f $(pwd)/html.css ]]; then
+       echo using css from current directory
+       css="--css $(pwd)/html.css"
+    fi
+elif [[ $pagetype == epub ]]
+then
+    template="--template=${direc}/epub_templ.html"
+    outputfile=$outprefix.epub
+    if [[ -f $(pwd)/epub_templ.html ]]; then
+       echo using template from current directory
+       template="--template=$(pwd)/epub_templ.html"
+    fi
+    if [[ -f $(pwd)/epub.css ]]; then
+       echo using css from current directory
+       css="--css $(pwd)/epub.css"
+    fi
 else
    template="--template=${direc}/template.tex"
+   css=""
    outputfile=$outprefix.pdf
    if [[ -f $(pwd)/template.tex ]]; then
         echo using template from current directory
@@ -40,7 +62,7 @@ else
 fi
 
 if [[ -f $outputfile ]]; then
-    echo "Overwriting file $(basename $1 .md).$([[ $pagetype = html ]] && echo "html" || echo "pdf" )"
+    echo "Overwriting file ${outputfile}"
     read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 fi
 
@@ -51,7 +73,9 @@ echo invoking pandoc...
 pandoc "$1" \
     --standalone \
     ${template} \
+    ${css} \
     --embed-resources \
+    --epub-title-page=false \
     --highlight-style ${direc}/pygments.theme \
     --pdf-engine=xelatex \
     -V linkcolor:blue \
@@ -64,7 +88,7 @@ pandoc "$1" \
     \
     -o "$outputfile" && (
 
-if [[ $pagetype != html ]]
+if [[ $pagetype == a4 ]] || [[ $pagetype == letter ]]
 then
     echo making folded versions...
     echo copying temporary file...

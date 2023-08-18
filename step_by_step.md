@@ -1,6 +1,7 @@
 ---links---
 - https://nashhigh.itch.io/zinearranger
-
+- https://pandoc.org/MANUAL.html
+- https://programminghistorian.org/en/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown // just a good tutorial
 
 ---process---
 - Installed:
@@ -36,13 +37,19 @@
     - learned from: https://tex.stackexchange.com/a/40115
 - a handful of commands to make formatting easier
     - \largefont | \smallfont - change to 14 and 10 px respectively
+        - `\newcommand{\largefont}{\fontsize{14}{18}\selectfont}`
+        - `\newcommand{\smallfont}{\fontsize{10}{12}\selectfont}`
     - \clibyte - generate a centered code block at the bottom of the current page
+        - `\newcommand{\clibyte}[1]{\vfill\makebox[\textwidth]{\texttt{#1}}}`
     - \bcenter | \ecenter - make centering things actually work
+        - `\newcommand{\bcenter}{\begin{center}}`
+        - `\newcommand{\ecenter}{\end{center}}`
 
 - folding to half and quarter
     - based on https://tug.org/pracjourn/2006-3/venugopal-pocketbook/venugopal-pocketbook.pdf
     - with help from the docs: http://tug.ctan.org/macros/latex/contrib/booklet/booklet.pdf
         - talk about differences between a4 and letter
+    - you get a nice outlines by putting a frame on the second step
 
 - and a simple bash script to make it all work nicely
     - outputs to a4, letter, and html

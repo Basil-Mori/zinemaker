@@ -600,6 +600,14 @@ $endif$
 $if(has-frontmatter)$
 \mainmatter
 $endif$
+
+\vspace*{\fill}
+\includegraphics[width=\textwidth]{cover.png}
+\vspace{\fill}
+\thispagestyle{empty}\clearpage
+
+\begingroup \smallfont \setcounter{page}{1}
+
 $body$
 
 $if(has-frontmatter)$
