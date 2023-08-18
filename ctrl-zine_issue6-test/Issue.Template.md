@@ -1,17 +1,11 @@
 ---
 title: 'Ctrl-Zine - Issue ??'
 author-meta: 'Various Authors'
+cover-image: 'cover.png'
 keywords:
 - 'zine'
 subject: ''
 ---
-
-\
-\
-![cover](cover.png)
-\thispagestyle{empty}\clearpage
-
-\begingroup \smallfont \setcounter{page}{1}
 
 **About ^Z**
 
